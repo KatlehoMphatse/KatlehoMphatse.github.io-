@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('Images/img7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Menu Icon - Top Left */
+.menu-icon {
+    position: absolute;
+    left: 1rem;
+    background: none;
+    color: #fff;
+    font-size: 40px;  /* Increased font size */
+    padding: 10px;    /* Added padding for a larger clickable area */
+    cursor: pointer;
+    transition: transform 0.3s ease;  /* Add a smooth effect when hovered */
+}
+
+
+.menu-icon:hover {
+    transform: scale(1.2);  /* Slightly enlarge the icon when hovered */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #666;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #d8b2b2;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for Text and Image */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+}
+
+/* Image Positioned to the Right */
+.Image {
+    flex: 0 0 300px;
+}
+
+.Image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .menu-icon {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .Image {
+        width: 100%;
+        max-width: 300px;
+    }
+}
